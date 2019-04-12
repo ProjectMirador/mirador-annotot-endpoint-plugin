@@ -1,15 +1,15 @@
-import React, {Component} from 'react'
-import {render} from 'react-dom'
+import mirador from 'mirador';
 
-import Example from '../../src'
+import { miradorAnnototEndpointPlugin } from '../../src'
 
-class Demo extends Component {
-  render() {
-    return <div>
-      <h1>mirador-annotot-endpoint Demo</h1>
-      <Example/>
-    </div>
-  }
+const config = {
+  id: 'demo',
+  windows: [{
+    loadedManifest: 'https://digi.vatlib.it/iiif/MSS_Arch.Cap.S.Pietro.D.182/manifest.json',
+    canvasIndex: 583
+  }],
 }
 
-render(<Demo/>, document.querySelector('#demo'))
+const miradorInstance = mirador.viewer(config, [
+  miradorAnnototEndpointPlugin,
+]);
