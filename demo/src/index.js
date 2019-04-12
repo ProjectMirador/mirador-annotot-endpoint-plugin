@@ -5,9 +5,12 @@ import { miradorAnnototEndpointPlugin } from '../../src'
 const config = {
   id: 'demo',
   windows: [{
-    loadedManifest: 'https://digi.vatlib.it/iiif/MSS_Arch.Cap.S.Pietro.D.182/manifest.json',
-    canvasIndex: 583
+    loadedManifest: ' https://digi.vatlib.it/iiif/MSS_Pal.lat.235/manifest.json',
+    canvasIndex: 20
   }],
+  annotot: {
+    endpoint: 'http://vatican-dev.sul.stanford.edu/annotations'
+  }
 }
 
 const miradorInstance = mirador.viewer(config, [
