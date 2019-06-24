@@ -9,7 +9,7 @@ const config = {
     canvasIndex: 20
   }],
   annotot: {
-    endpoint: 'http://vatican-dev.sul.stanford.edu/annotations'
+    endpoint: 'https://spotlight.vatlib.it/annotations'
   }
 }
 
