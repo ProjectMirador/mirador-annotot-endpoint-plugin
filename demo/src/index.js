@@ -5,11 +5,14 @@ import { miradorAnnototEndpointPlugin } from '../../src'
 const config = {
   id: 'demo',
   windows: [{
-    loadedManifest: ' https://digi.vatlib.it/iiif/MSS_Pal.lat.235/manifest.json',
-    canvasIndex: 20
+    loadedManifest: ' https://cdm16079.contentdm.oclc.org/iiif/info/p16079coll32/125688/manifest.json',
   }],
+  window: {
+    defaultSideBarPanel: 'annotations',
+    sideBarOpenByDefault: true,
+  },
   annotot: {
-    endpoint: 'https://spotlight.vatlib.it/annotations'
+    endpoint: 'https://annotot-app.herokuapp.com/annotations'
   }
 }
 

@@ -53,7 +53,7 @@ class MiradorAnnototEndpoint extends Component {
 
 function mapStateToProps(state, { targetProps }) {
   return {
-    canvases: mirador.selectors.getSelectedCanvases(state, { windowId: targetProps.windowId }),
+    canvases: mirador.selectors.getVisibleCanvases(state, { windowId: targetProps.windowId }),
     config: state.config,
   };
 };
